@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>greetings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/greet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Greetings</h1>
+
+    <input type="text" name="" value="" placeholder="Enter your name" class="addName">
+    <br />
+    <div class="counts">Counter: <i class="counts">0</i>
+    </div>
+    <form>
+
+      <label class="radio-inline">
+      <input type="radio" class = "optradio" value="English" name = "language">English
+    </label>
+      <label class="radio-inline">
+      <input type="radio" class = "optradio" value="Afrikaans" name = "language">Afrikaans
+    </label>
+      <label class="radio-inline">
+      <input type="radio" class = "optradio" value="IsiXhosa" name = "language">Isixhosa
+    </label>
+      <br />
+    <button type="button" class="greeting btn btn-success  btn-lg">Greet</button>
+    <button type="button" class="clearBtn btn btn-danger btn-lg">Reset</button>
+
+    <br/>
+    <br/>
+
+    <div class="messageArea">
+
+      <p></p>
+    </div>
+
+    </form>
+
+
+  </div>
+
+<script src="js/greet-logic.js"></script>
+<script src="js/greet.js"></script>
+
+</body>
+
+</html>

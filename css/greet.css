@@ -1,0 +1,22 @@
+ .container {
+   text-align: center;
+   background-color: white;
+   border-width: 15em;
+   height: 20em;
+   border-style: inset;
+
+ }
+ button {
+   padding: 20em;
+ }
+ @media (max-width: 667px ) {
+   .container {
+     background-size: cover;
+     text-align: center;
+     background-color: white;
+     border-width: 25em;
+     height: 50em;
+     border-style: inset;
+
+   }
+ }
