@@ -52,3 +52,31 @@ describe(' Counter', function() {
 
 
 });
+
+describe(' Return Map', function() {
+
+  it('return an empty map', function() {
+    var factroryfun = NamesGreeted();
+    // factroryfun.sa('English', 'LILO');
+    // factroryfun.sa('IsiXhosa', 'LILO');
+    assert.deepEqual({}, factroryfun.getNames());
+  });
+
+  it('return names greg and lilo in a map', function() {
+    var factroryfun = NamesGreeted();
+    factroryfun.sa('English', 'LILO');
+    factroryfun.sa('IsiXhosa', 'Greg');
+    assert.deepEqual({'LILO':0, 'Greg':0}, factroryfun.getNames());
+  });
+  // it('should count atleast 3 greeted people', function() {
+  //   var factroryfun = NamesGreeted();
+  //   factroryfun.sa('English', 'Greg');
+  //   factroryfun.sa('IsiXhosa', 'Sbu');
+  //   factroryfun.sa('Afrikaans', 'Cobus');
+  //   assert.equal(3, factroryfun.counts());
+  //
+  // });
+
+
+
+});

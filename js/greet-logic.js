@@ -37,11 +37,11 @@ function NamesGreeted(usersGreeted) {
 
     }
   }
-  /*
+
   function getGreetingNames() {
     return namesGreeted;
   }
-  */
+
   function countNames() {
     return Object.keys(namesGreeted).length;
   }
@@ -53,7 +53,7 @@ function NamesGreeted(usersGreeted) {
 
 
   return {
-    //getNames: getGreetingNames,
+    getNames: getGreetingNames,
     greets: greetedNames,
     cleared: clearBtn,
     //displaying,

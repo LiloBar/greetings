@@ -8,18 +8,15 @@ var greetingElement = document.querySelector(".messageArea");
 var language = document.querySelector("optradio")
 var countElem = document.querySelector(".counts")
 
-var users = localStorage.getItem('namesGreeted')
-var usersGreeted = JSON.parse(users)
 
-window.addEventListener('load', function() {
-  var user = NamesGreeted(usersGreeted);
-  console.log(user.counts());
 
-  countElem.innerHTML = user.counts()
 
-})
-
+var users = localStorage.getItem('namesGreeted');
+var usersGreeted = users ? JSON.parse(users) : {};
 var user = NamesGreeted(usersGreeted);
+
+countElem.innerHTML = user.counts();
+
 
 // function greet(firstName){
 //   if (firstName.length > 2){
@@ -36,16 +33,15 @@ greeting.addEventListener('click', function() {
        return greetingElement.innerHTML = "Please enter your name";
 
     }
-    var greetingString = user.greets(language, textField.value);
+    var greetingString = user.greets(language, textField.value.toUpperCase());
     //getGreetingNames.innerHTML = NamesGreeted;
-    greetingElement.innerHTML = greetingString.toUpperCase();
+    greetingElement.innerHTML = greetingString;
     textField.value = '';
 
 
     countElem.innerHTML = user.counts()
-    localStorage.setItem('namesGreeted', JSON.stringify(user.getNames()))
-
-
+    localStorage.setItem('namesGreeted', JSON.stringify(user.getNames()));
+      //localStorage.setItem('counts', JSON.stringify(user.counts()));
 }
 
  else {
@@ -61,5 +57,15 @@ greeting.addEventListener('click', function() {
 clearBtn.addEventListener('click', function() {
   localStorage.clear();
   location.reload();
+
+})
+
+window.addEventListener('load', function() {
+  //var user = NamesGreeted(usersGreeted);
+
+  // console.log(usersGreeted);
+
+
+  countElem.innerHTML = user.counts()
 
 })
